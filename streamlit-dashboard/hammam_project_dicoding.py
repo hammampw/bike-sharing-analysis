@@ -7,7 +7,7 @@ import seaborn as sns
 from babel.numbers import format_currency
 
 # Data Wrangling
-df_hari = pd.read_csv("day.csv")
+df_hari = pd.read_csv("streamlit-dashboard/day.csv")
 df_hari.rename(columns={
     'dteday': 'dateday',
     'yr': 'year',
@@ -96,7 +96,7 @@ max_date = pd.to_datetime(df_hari['dateday']).dt.date.max()
 
 with st.sidebar:
     st.image(
-        'bike.jpeg')
+        'streamlit-dashboard/bike.jpeg')
 
     # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
